@@ -2,9 +2,9 @@
 
 This Slack app brings Microsoft 365 Group Calendars into Slack. You can:
 
-* [ ] Show created, updated, or deleted events
-* [ ] Show reminders for events
-* [ ] Show a daily summary of events
+* [ ] Be notified of created, updated, and deleted events
+* [ ] Get reminders for events
+* [ ] Get a daily summary of events
 
 If you are familiar with the Slack app "[Google Calendar for Team Events][gcal]",
 this app is like that, only for Microsoft 365 Groups Calendars.
