@@ -1,5 +1,9 @@
 import { inspect } from 'node:util'
 import arc from '@architect/functions'
+import bolt from '@slack/bolt'
+import config from 'config'
+
+const { App, LogLevel } = bolt
 
 export const handler = arc.http.async(async function (req) {
     console.log(inspect(req, { depth: null }))
@@ -14,6 +18,21 @@ export const handler = arc.http.async(async function (req) {
             body: req.queryStringParameters.validationToken
         }
     }
+
+    const token = config.get('slack.token')
+    const signingSecret = config.get('slack.signingSecret')
+
+    const app = new App({
+        token,
+        signingSecret,
+        logLevel: LogLevel.DEBUG
+    })
+
+    await app.client.chat.postMessage({
+        token,
+        channel: 'C047TH2V14Y',
+        text: 'received a webhook from Microsoft Outlook :sparkles:'
+    })
 
     return {
         statusCode: 204,
