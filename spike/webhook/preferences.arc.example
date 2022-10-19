@@ -1,0 +1,16 @@
+# rename this to preferences.arc and populate values with `arc env`
+@env
+testing # used by `arc sandbox`
+  ARC_APP_SECRET randomvalue
+  SLACK_SIGNING_SECRET somesecret
+  SLACK_TOKEN xoxb-sometoken
+
+staging # default environment for `arc deploy`
+  ARC_APP_SECRET randomvalue
+  SLACK_SIGNING_SECRET somesecret
+  SLACK_TOKEN xoxb-sometoken
+
+production # used by `arc deploy --production`
+  ARC_APP_SECRET randomvalue
+  SLACK_SIGNING_SECRET somesecret
+  SLACK_TOKEN xoxb-sometoken
