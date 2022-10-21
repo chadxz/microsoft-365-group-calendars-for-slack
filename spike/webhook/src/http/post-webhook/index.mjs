@@ -3,7 +3,9 @@ import arc from '@architect/functions'
 import bolt from '@slack/bolt'
 import config from 'config'
 
-const { App, LogLevel } = bolt
+import eventMessage from './event-message.mjs'
+
+const { App } = bolt
 
 export const handler = arc.http.async(async function (req) {
     console.log(inspect(req, { depth: null }))
@@ -25,14 +27,17 @@ export const handler = arc.http.async(async function (req) {
     const app = new App({
         token,
         signingSecret,
-        logLevel: LogLevel.DEBUG
+        // logLevel: LogLevel.DEBUG
     })
 
-    await app.client.chat.postMessage({
-        token,
-        channel: 'C047TH2V14Y',
-        text: 'received a webhook from Microsoft Outlook :sparkles:'
-    })
+
+    await Promise.all(req.body.value?.map(async (event) => {
+        await app.client.chat.postMessage({
+            token,
+            channel: 'C047TH2V14Y',
+            ...eventMessage(event)
+        })
+    }))
 
     return {
         statusCode: 204,
