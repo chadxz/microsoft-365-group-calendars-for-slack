@@ -268,8 +268,8 @@ created = {
         'content-length': '937',
         'content-type': 'application/json; charset=utf-8',
         host: 'pdv5tpv90c.execute-api.us-east-1.amazonaws.com',
-        'x-amzn-trace-id': 'Root=1-634c8003-1034439b34f7cbb75c18e289',
-        'x-forwarded-for': '52.151.30.78',
+        'x-amzn-trace-id': 'Root=1-635211b4-4c587ff45229f2b222eb5d4d',
+        'x-forwarded-for': '40.76.162.99',
         'x-forwarded-port': '443',
         'x-forwarded-proto': 'https'
     },
@@ -282,19 +282,36 @@ created = {
             method: 'POST',
             path: '/webhook',
             protocol: 'HTTP/1.1',
-            sourceIp: '52.151.30.78',
+            sourceIp: '40.76.162.99',
             userAgent: ''
         },
-        requestId: 'aHjwpgcrIAMEJFg=',
+        requestId: 'aVe0OhL2oAMEVgQ=',
         routeKey: 'POST /webhook',
         stage: '$default',
-        time: '16/Oct/2022:22:04:51 +0000',
-        timeEpoch: 1665957891956
+        time: '21/Oct/2022:03:27:48 +0000',
+        timeEpoch: 1666322868474
     },
-    body: { value: [ [Object] ] },
+    body: {
+        value: [
+            {
+                subscriptionId: 'ec73a6d8-5535-40ba-8b84-71b6b56788f4',
+                subscriptionExpirationDateTime: '2022-10-22T11:00:00+00:00',
+                changeType: 'created',
+                resource: 'Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=',
+                resourceData: {
+                    '@odata.type': '#Microsoft.Graph.Event',
+                    '@odata.id': 'Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=',
+                    '@odata.etag': 'W/"DwAAABYAAAAJk/rg5HJKR4HmS51TSiYlAAAecwKg"',
+                    id: 'AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA='
+                },
+                clientState: 'foo',
+                tenantId: '5db8d39a-c41e-43e3-8c70-c0509395ab8a'
+            }
+        ]
+    },
     isBase64Encoded: false,
     session: {},
-    rawBody: '{"value":[{"subscriptionId":"76cba807-4d07-407b-a5ba-37a7b21d0003","subscriptionExpirationDateTime":"2022-10-18T11:00:00+00:00","changeType":"created","resource":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ8AAA=","resourceData":{"@odata.type":"#Microsoft.Graph.Event","@odata.id":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ8AAA=","@odata.etag":"W/\\"DwAAABYAAAAJk/rg5HJKR4HmS51TSiYlAAAbkbf0\\"","id":"AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ8AAA="},"clientState":"foo","tenantId":"5db8d39a-c41e-43e3-8c70-c0509395ab8a"}]}',
+    rawBody: '{"value":[{"subscriptionId":"ec73a6d8-5535-40ba-8b84-71b6b56788f4","subscriptionExpirationDateTime":"2022-10-22T11:00:00+00:00","changeType":"created","resource":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=","resourceData":{"@odata.type":"#Microsoft.Graph.Event","@odata.id":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=","@odata.etag":"W/\\"DwAAABYAAAAJk/rg5HJKR4HmS51TSiYlAAAecwKg\\"","id":"AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA="},"clientState":"foo","tenantId":"5db8d39a-c41e-43e3-8c70-c0509395ab8a"}]}',
     httpMethod: 'POST',
     pathParameters: {},
     queryStringParameters: {},
@@ -305,61 +322,16 @@ created = {
     query: {}
 }
 updated = {
-  version: '2.0',
-  routeKey: 'POST /webhook',
-  rawPath: '/webhook',
-  rawQueryString: '',
-  headers: {
-    'content-length': '937',
-    'content-type': 'application/json; charset=utf-8',
-    host: 'pdv5tpv90c.execute-api.us-east-1.amazonaws.com',
-    'x-amzn-trace-id': 'Root=1-634c7c70-678e821f6aaa8b5e716e65bd',
-    'x-forwarded-for': '40.74.203.28',
-    'x-forwarded-port': '443',
-    'x-forwarded-proto': 'https'
-  },
-  requestContext: {
-    accountId: '619705995164',
-    apiId: 'pdv5tpv90c',
-    domainName: 'pdv5tpv90c.execute-api.us-east-1.amazonaws.com',
-    domainPrefix: 'pdv5tpv90c',
-    http: {
-      method: 'POST',
-      path: '/webhook',
-      protocol: 'HTTP/1.1',
-      sourceIp: '40.74.203.28',
-      userAgent: ''
-    },
-    requestId: 'aHhhkgxrIAMEPHg=',
-    routeKey: 'POST /webhook',
-    stage: '$default',
-    time: '16/Oct/2022:21:49:36 +0000',
-    timeEpoch: 1665956976241
-  },
-  body: { value: [ [Object] ] },
-  isBase64Encoded: false,
-  session: {},
-  rawBody: '{"value":[{"subscriptionId":"cf5a91c5-1756-43ed-b47c-44e2f4f7ec83","subscriptionExpirationDateTime":"2022-10-18T11:00:00+00:00","changeType":"updated","resource":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ7AAA=","resourceData":{"@odata.type":"#Microsoft.Graph.Event","@odata.id":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ7AAA=","@odata.etag":"W/\\"DwAAABYAAAAJk/rg5HJKR4HmS51TSiYlAAAbkbfo\\"","id":"AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ7AAA="},"clientState":"foo","tenantId":"5db8d39a-c41e-43e3-8c70-c0509395ab8a"}]}',
-  httpMethod: 'POST',
-  pathParameters: {},
-  queryStringParameters: {},
-  resource: '/webhook',
-  path: '/webhook',
-  method: 'POST',
-  params: {},
-  query: {}
-}
-deleted = {
     version: '2.0',
     routeKey: 'POST /webhook',
     rawPath: '/webhook',
     rawQueryString: '',
     headers: {
-        'content-length': '905',
+        'content-length': '937',
         'content-type': 'application/json; charset=utf-8',
         host: 'pdv5tpv90c.execute-api.us-east-1.amazonaws.com',
-        'x-amzn-trace-id': 'Root=1-634c8046-2235e53b236902271298008e',
-        'x-forwarded-for': '52.151.30.78',
+        'x-amzn-trace-id': 'Root=1-635211c7-6ea19aa873ce6fb436547404',
+        'x-forwarded-for': '40.76.162.99',
         'x-forwarded-port': '443',
         'x-forwarded-proto': 'https'
     },
@@ -372,19 +344,98 @@ deleted = {
             method: 'POST',
             path: '/webhook',
             protocol: 'HTTP/1.1',
-            sourceIp: '52.151.30.78',
+            sourceIp: '40.76.162.99',
             userAgent: ''
         },
-        requestId: 'aHj7HgiSIAMEPoA=',
+        requestId: 'aVe3JjdJIAMEKgw=',
         routeKey: 'POST /webhook',
         stage: '$default',
-        time: '16/Oct/2022:22:05:58 +0000',
-        timeEpoch: 1665957958954
+        time: '21/Oct/2022:03:28:07 +0000',
+        timeEpoch: 1666322887121
     },
-    body: { value: [ [Object] ] },
+    body: {
+        value: [
+            {
+                subscriptionId: 'ec73a6d8-5535-40ba-8b84-71b6b56788f4',
+                subscriptionExpirationDateTime: '2022-10-22T11:00:00+00:00',
+                changeType: 'updated',
+                resource: 'Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=',
+                resourceData: {
+                    '@odata.type': '#Microsoft.Graph.Event',
+                    '@odata.id': 'Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=',
+                    '@odata.etag': 'W/"DwAAABYAAAAJk/rg5HJKR4HmS51TSiYlAAAecwKl"',
+                    id: 'AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA='
+                },
+                clientState: 'foo',
+                tenantId: '5db8d39a-c41e-43e3-8c70-c0509395ab8a'
+            }
+        ]
+    },
     isBase64Encoded: false,
     session: {},
-    rawBody: '{"value":[{"subscriptionId":"76cba807-4d07-407b-a5ba-37a7b21d0003","subscriptionExpirationDateTime":"2022-10-18T11:00:00+00:00","changeType":"deleted","resource":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ7AAA=","resourceData":{"@odata.type":"#Microsoft.Graph.Event","@odata.id":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ7AAA=","@odata.etag":"W/\\"CQAAAA==\\"","id":"AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAbkXZ7AAA="},"clientState":"foo","tenantId":"5db8d39a-c41e-43e3-8c70-c0509395ab8a"}]}',
+    rawBody: '{"value":[{"subscriptionId":"ec73a6d8-5535-40ba-8b84-71b6b56788f4","subscriptionExpirationDateTime":"2022-10-22T11:00:00+00:00","changeType":"updated","resource":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=","resourceData":{"@odata.type":"#Microsoft.Graph.Event","@odata.id":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=","@odata.etag":"W/\\"DwAAABYAAAAJk/rg5HJKR4HmS51TSiYlAAAecwKl\\"","id":"AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA="},"clientState":"foo","tenantId":"5db8d39a-c41e-43e3-8c70-c0509395ab8a"}]}',
+    httpMethod: 'POST',
+    pathParameters: {},
+    queryStringParameters: {},
+    resource: '/webhook',
+    path: '/webhook',
+    method: 'POST',
+    params: {},
+    query: {}
+}
+deleted = {
+    version: '2.0',
+    routeKey: 'POST /webhook',
+    rawPath: '/webhook',
+    rawQueryString: '',
+    headers: {
+        'content-length': '905',
+        'content-type': 'application/json; charset=utf-8',
+        host: 'pdv5tpv90c.execute-api.us-east-1.amazonaws.com',
+        'x-amzn-trace-id': 'Root=1-635211c7-76fc56c1709eb4714014feee',
+        'x-forwarded-for': '40.76.162.99',
+        'x-forwarded-port': '443',
+        'x-forwarded-proto': 'https'
+    },
+    requestContext: {
+        accountId: '619705995164',
+        apiId: 'pdv5tpv90c',
+        domainName: 'pdv5tpv90c.execute-api.us-east-1.amazonaws.com',
+        domainPrefix: 'pdv5tpv90c',
+        http: {
+            method: 'POST',
+            path: '/webhook',
+            protocol: 'HTTP/1.1',
+            sourceIp: '40.76.162.99',
+            userAgent: ''
+        },
+        requestId: 'aVe3JhLBIAMEVfg=',
+        routeKey: 'POST /webhook',
+        stage: '$default',
+        time: '21/Oct/2022:03:28:07 +0000',
+        timeEpoch: 1666322887145
+    },
+    body: {
+        value: [
+            {
+                subscriptionId: 'ec73a6d8-5535-40ba-8b84-71b6b56788f4',
+                subscriptionExpirationDateTime: '2022-10-22T11:00:00+00:00',
+                changeType: 'deleted',
+                resource: 'Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=',
+                resourceData: {
+                    '@odata.type': '#Microsoft.Graph.Event',
+                    '@odata.id': 'Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=',
+                    '@odata.etag': 'W/"CQAAAA=="',
+                    id: 'AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA='
+                },
+                clientState: 'foo',
+                tenantId: '5db8d39a-c41e-43e3-8c70-c0509395ab8a'
+            }
+        ]
+    },
+    isBase64Encoded: false,
+    session: {},
+    rawBody: '{"value":[{"subscriptionId":"ec73a6d8-5535-40ba-8b84-71b6b56788f4","subscriptionExpirationDateTime":"2022-10-22T11:00:00+00:00","changeType":"deleted","resource":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=","resourceData":{"@odata.type":"#Microsoft.Graph.Event","@odata.id":"Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA=","@odata.etag":"W/\\"CQAAAA==\\"","id":"AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAAecy6lAAA="},"clientState":"foo","tenantId":"5db8d39a-c41e-43e3-8c70-c0509395ab8a"}]}',
     httpMethod: 'POST',
     pathParameters: {},
     queryStringParameters: {},
@@ -398,3 +449,75 @@ deleted = {
 ```
 
 Block kit builder helps build UIs for Slack https://app.slack.com/block-kit-builder/
+
+
+Fetch event: GET https://graph.microsoft.com/v1.0/Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAApEW8FAAA=
+```json
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#groups('76382f05-da48-434b-a487-27c99c1693f1')/events/$entity",
+    "@odata.etag": "W/\"CZP64ORySkeB5kudU0omJQAAKRHXXg==\"",
+    "id": "AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAApEW8FAAA=",
+    "createdDateTime": "2022-11-06T03:39:10.17546Z",
+    "lastModifiedDateTime": "2022-11-06T03:39:10.8473034Z",
+    "changeKey": "CZP64ORySkeB5kudU0omJQAAKRHXXg==",
+    "categories": [],
+    "transactionId": "51380c2a-aa1d-75fb-e00a-55fd2da0a6b2",
+    "originalStartTimeZone": "Central Standard Time",
+    "originalEndTimeZone": "Central Standard Time",
+    "iCalUId": "040000008200E00074C5B7101A82E00800000000DC88BE5491F1D8010000000000000000100000005649C98E9D445245BF56D9CCFEE85BA5",
+    "reminderMinutesBeforeStart": 15,
+    "isReminderOn": true,
+    "hasAttachments": false,
+    "subject": "Heyyyyyyy",
+    "bodyPreview": "What's up",
+    "importance": "normal",
+    "sensitivity": "normal",
+    "isAllDay": false,
+    "isCancelled": false,
+    "isOrganizer": true,
+    "responseRequested": true,
+    "seriesMasterId": null,
+    "showAs": "busy",
+    "type": "singleInstance",
+    "webLink": "https://outlook.office365.com/calendar/deeplink/read/group/23ns5m.onmicrosoft.com/SampleTeamSite/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8/+/QbEnnjxv3TP/BwAJk/rg5HJKR4HmS51TSiYlAAAAAAENAAAJk/rg5HJKR4HmS51TSiYlAAApEW8FAAA=",
+    "onlineMeetingUrl": null,
+    "isOnlineMeeting": false,
+    "onlineMeetingProvider": "unknown",
+    "allowNewTimeProposals": true,
+    "isDraft": false,
+    "hideAttendees": false,
+    "recurrence": null,
+    "onlineMeeting": null,
+    "responseStatus": {
+        "response": "organizer",
+        "time": "0001-01-01T00:00:00Z"
+    },
+    "body": {
+        "contentType": "html",
+        "content": "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body><div style=\"font-family:Calibri,Arial,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0); background-color:rgb(255,255,255)\">What's up</div></body></html>"
+    },
+    "start": {
+        "dateTime": "2022-11-02T15:00:00.0000000",
+        "timeZone": "UTC"
+    },
+    "end": {
+        "dateTime": "2022-11-02T15:30:00.0000000",
+        "timeZone": "UTC"
+    },
+    "location": {
+        "displayName": "",
+        "locationType": "default",
+        "uniqueIdType": "unknown",
+        "address": {},
+        "coordinates": {}
+    },
+    "locations": [],
+    "attendees": [],
+    "organizer": {
+        "emailAddress": {
+            "name": "Sample Team Site",
+            "address": "SampleTeamSite@23ns5m.onmicrosoft.com"
+        }
+    }
+}
+```

@@ -30,7 +30,6 @@ export const handler = arc.http.async(async function (req) {
         // logLevel: LogLevel.DEBUG
     })
 
-
     await Promise.all(req.body.value?.map(async (event) => {
         await app.client.chat.postMessage({
             token,
