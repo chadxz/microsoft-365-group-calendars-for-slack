@@ -223,6 +223,7 @@ req = {
 ```
 
 Events documentation: https://learn.microsoft.com/en-us/graph/api/calendar-list-events?view=graph-rest-1.0&tabs=http
+
 Subscription documentation: https://learn.microsoft.com/en-us/graph/api/resources/subscription?view=graph-rest-1.0
 
 Example subscription payload. POST https://graph.microsoft.com/v1.0/subscriptions
@@ -235,6 +236,7 @@ Example subscription payload. POST https://graph.microsoft.com/v1.0/subscription
     "clientState": "foo"
 }
 ```
+
 Example response payload:
 ```json
 {
@@ -450,7 +452,6 @@ deleted = {
 
 Block kit builder helps build UIs for Slack https://app.slack.com/block-kit-builder/
 
-
 Fetch event: GET https://graph.microsoft.com/v1.0/Groups/76382f05-da48-434b-a487-27c99c1693f1/Events/AAMkAGViYzY5NTVhLTcxNzUtNDE3YS05N2FhLTNhODU5OWE2MWVlZABGAAAAAABYnoNt8-_-QbEnnjxv3TP-BwAJk-rg5HJKR4HmS51TSiYlAAAAAAENAAAJk-rg5HJKR4HmS51TSiYlAAApEW8FAAA=
 ```json
 {
@@ -521,3 +522,69 @@ Fetch event: GET https://graph.microsoft.com/v1.0/Groups/76382f05-da48-434b-a487
     }
 }
 ```
+
+OAuth2 Authorization redirect
+```
+GET https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?
+client_id=11111111-1111-1111-1111-111111111111
+&response_type=code
+&redirect_uri=https%3A%2F%2Fpdv5tpv90c.execute-api.us-east-1.amazonaws.com
+&response_mode=query
+&scope=offline_access%20Group.Read.All
+&state=thisisnotsecure_usejwtinstead
+```
+
+Token Request
+```
+POST https://login.microsoftonline.com/organizations/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=11111111-1111-1111-1111-111111111111
+&scope=Group.Read.All
+&code=OAAABAAAAiL9Kn2Z27UubvWFPbm0gLWQJVzCTE9UkP3pSx1aXxUjq3n8b2JRLk4OxVXr...
+&refresh_token=OAAABAAAAiL9Kn2Z27UubvWFPbm0gLWQJVzCTE9UkP3pSx1aXxUjq... // use this instead of `code` for refreshing
+&redirect_uri=https%3A%2F%2Fpdv5tpv90c.execute-api.us-east-1.amazonaws.com
+&grant_type=authorization_code
+&client_secret=jXoM3iz...
+```
+
+Token Response
+```
+{
+    "token_type": "Bearer",
+    "scope": "Group.Read.All profile openid email",
+    "expires_in": 3600,
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJ...",
+    "refresh_token": "AwABAAAAvPM1KaPlrEqdFSBzjqfTGAMxZGUTdM0t4B4..."
+}
+```
+
+Refresh the Token. Same response as Token response
+```
+POST https://login.microsoftonline.com/organizations/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=11111111-1111-1111-1111-111111111111
+&scope=Group.Read.All
+&refresh_token=OAAABAAAAiL9Kn2Z27UubvWFPbm0gLWQJVzCTE9UkP3pSx1aXxUjq...
+&redirect_uri=https%3A%2F%2Fpdv5tpv90c.execute-api.us-east-1.amazonaws.com
+&grant_type=refresh_token
+&client_secret=jXoM3iz...
+```
+
+Using the access_token to make a request against the graph
+```
+GET https://graph.microsoft.com/v1.0/me
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJ...
+```
+
+"Proper" way to do the requests to the graph API would be to use the
+`@microsoft/microsoft-graph-client` npm module along with the authentication
+library npm module `@azure/msal-node`.
+
+Example TokenCache implementation for reading/writing to a database:
+https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-node-samples/ExpressTestApp/TestApp/App/utils/cachePlugin.js
+
+Workflows:
+![](workflows.jpeg)
+

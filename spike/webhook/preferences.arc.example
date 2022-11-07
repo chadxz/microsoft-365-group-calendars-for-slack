@@ -1,16 +1,25 @@
-# rename this to preferences.arc and populate values with `arc env`
+# the application expects these values to be set using `npx arc env`
 @env
 testing # used by `arc sandbox`
   ARC_APP_SECRET randomvalue
   SLACK_SIGNING_SECRET somesecret
   SLACK_TOKEN xoxb-sometoken
+  O365_CLIENT_ID 11111111-1111-1111-1111-111111111111
+  O365_CLIENT_SECRET randomclientsecret
+  O365_REFRESH_TOKEN SOMEREFRESHTOKEN_TEMPORARY_STOPGAP
 
 staging # default environment for `arc deploy`
   ARC_APP_SECRET randomvalue
   SLACK_SIGNING_SECRET somesecret
   SLACK_TOKEN xoxb-sometoken
+  O365_CLIENT_ID 11111111-1111-1111-1111-111111111111
+  O365_CLIENT_SECRET randomclientsecret
+  O365_REFRESH_TOKEN SOMEREFRESHTOKEN_TEMPORARY_STOPGAP
 
 production # used by `arc deploy --production`
   ARC_APP_SECRET randomvalue
   SLACK_SIGNING_SECRET somesecret
   SLACK_TOKEN xoxb-sometoken
+  O365_CLIENT_ID 11111111-1111-1111-1111-111111111111
+  O365_CLIENT_SECRET randomclientsecret
+  O365_REFRESH_TOKEN SOMEREFRESHTOKEN_TEMPORARY_STOPGAP

@@ -2,5 +2,10 @@
   "slack": {
     "token": "",
     "signingSecret": ""
+  },
+  "O365": {
+    "clientID": "",
+    "clientSecret": "",
+    "refreshToken": ""
   }
 }

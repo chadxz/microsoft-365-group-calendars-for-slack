@@ -34,7 +34,7 @@ export const handler = arc.http.async(async function (req) {
         await app.client.chat.postMessage({
             token,
             channel: 'C047TH2V14Y',
-            ...eventMessage(event)
+            ...await eventMessage(event)
         })
     }))
 
